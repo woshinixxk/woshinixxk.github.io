@@ -1,0 +1,213 @@
+body, div, ul, li, span, select, textarea, p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.calWrap {
+  width: 350px;
+}
+.calWrap .calYear {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  box-sizing: border-box;
+  color: #82d7ff;
+  text-align: center;
+}
+.calWrap ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 350px;
+  flex-wrap: -webkit-wrap;
+  flex-wrap: -ms-wrap;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.calWrap ul li {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #e9e9e8;
+  border-left: 1px solid #e9e9e8;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.calWrap ul li.calendar_week {
+  height: 50px;
+  line-height: 50px;
+  cursor: default;
+}
+.calWrap ul li.calendar_block {
+  cursor: default;
+}
+.calWrap ul li.current_day {
+  color: white;
+  background-color: #82d7ff;
+}
+.calWrap ul li.mouse_on {
+  background-color: #e9e9e8;
+}
+
+.calDetail {
+  position: relative;
+  top: -300px;
+  left: 350px;
+  margin-left: 50px;
+  padding: 0 10px;
+  width: 300px;
+  border-left: 1px solid #e9e9e8;
+  border-right: 1px solid #e9e9e8;
+}
+.calDetail .default {
+  color: #e9e9e8;
+}
+.calDetail .date span {
+  float: right;
+  color: white;
+  padding: 0 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.calDetail .detItem {
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #e9e9e8;
+}
+.calDetail .detItem .default {
+  color: #e9e9e8;
+}
+.calDetail .detItem span.add_off {
+  background-color: #e9e9e8;
+}
+.calDetail .detItem span.add_on {
+  background-color: #82d7ff;
+}
+.calDetail .detItem span.itemTitle {
+  display: block;
+}
+.calDetail .detItem span.itemTime {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0 5px;
+  background-color: #82d7ff;
+  color: white;
+}
+.calDetail .detItem span.icon_off {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #e9e9e8;
+}
+.calDetail .detItem span.icon_on {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+}
+.calDetail .detItem span.state_off {
+  display: inline-block;
+  margin: 10px 0 0 5px;
+  color: #e9e9e8;
+}
+.calDetail .detItem span.state_on {
+  display: inline-block;
+  margin: 10px 0 0 5px;
+  color: green;
+}
+
+.addBar {
+  position: absolute;
+  left: 730px;
+  top: 100px;
+  width: 256px;
+  height: 200px;
+  box-sizing: border-box;
+}
+.addBar ul {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e9e9e8;
+}
+.addBar ul li {
+  float: left;
+  padding: 0 5px;
+  color: #999999;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.addBar ul li.selected {
+  color: white;
+  background-color: #82d7ff;
+}
+.addBar .itemGroup {
+  margin-bottom: 5px;
+}
+.addBar .itemGroup span {
+  padding: 0 2px;
+  color: white;
+  background-color: #e9e9e8;
+  text-align: center;
+}
+.addBar .itemGroup select {
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+.addBar textarea {
+  display: block;
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px dashed #e9e9e8;
+  outline: none;
+  resize: none;
+}
+.addBar .hide {
+  display: none;
+}
+.addBar .doit {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+.addBar .count {
+  position: relative;
+  top: -55px;
+  left: 190px;
+  font-size: 14px;
+  border: none;
+  color: #999999;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.off {
+  background-color: #e9e9e8;
+}
+
+.on {
+  color: white;
+  background-color: #82d7ff;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+/*# sourceMappingURL=base.css.map */
