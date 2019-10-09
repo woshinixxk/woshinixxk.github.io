@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> fui风格日历开发 </title>
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+</head>
+<body>
+	<!-- fui日历 -->
+	<div class="calWrap">
+		<!-- 年月日标题 -->
+		<div class="calYear"></div>
+		<!-- 日期星期列表 -->
+		<ul class="calList"></ul>
+	</div>
+
+	<!-- 每日详情内容 -->
+	<div class="calDetail"></div>
+	<!-- 添加选项 -->
+	<div class="addBar hide">
+		<ul class="addMenu clearfix">
+			<li class="selected">行程</li>
+			<li>任务</li>
+			<li>随笔</li>
+		</ul>
+
+		<div class="textGroup show">
+			<div class="itemGroup">
+				<span>开始时间</span>
+				<!-- 开始时间 时 -->
+				<select class="startHours"></select>
+				<!-- 开始时间 分 -->
+				<select class="startMinutes"></select>
+			</div>
+
+			<div class="itemGroup">
+				<span>结束时间</span>
+				<select class="endHours"></select>
+				<select class="endMinutes"></select>
+			</div>
+
+			<textarea rows="8" cols="38" maxlength="100" placeholder="今天有何行程呢？"></textarea>
+			<span class="doit off">do it</span>
+			<span class="count"><span>0</span> / 100</span>
+		</div>
+
+		<div class="textGroup hide">
+			<textarea rows="8" cols="38" maxlength="100" placeholder="今天有何目标呢？"></textarea>
+			<span class="doit off">do it</span>
+			<span class="count"><span>0</span> / 100</span>
+		</div>
+
+		<div class="textGroup hide">
+			<textarea rows="8" cols="38" maxlength="100" placeholder="今天要写些什么呢？"></textarea>
+			<span class="doit off">do it</span>
+			<span class="count"><span>0</span> / 100</span>
+		</div>
+		
+	</div>
+
+	<script src="./js/main.js"></script>
+</body>
+</html>
