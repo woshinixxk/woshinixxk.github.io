@@ -1,0 +1,232 @@
+
+$col82d:#82d7ff;
+$cole9e:#e9e9e8;
+$colWhite:white;
+$colGreen:green;
+
+$padd05:0 5px;
+$width50: 50px;
+$width350: 350px;
+$height50: 50px;
+$lineHeight50: 50px;
+
+$center:center;
+$borderBox: border-box;
+$pointer: pointer;
+$posRel: relative;
+$disInlBlock: inline-block;
+$disBlock: block;
+$none: none;
+
+body,div,ul,li,span,select,textarea,p{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear:both;
+	visibility: hidden;
+}
+
+
+// calWrap start 
+.calWrap{
+	width: $width350;
+	.calYear{
+		width: 100%;
+		height: $height50 * 2;
+		line-height: $height50 *2;
+		box-sizing: $borderBox;
+		color: $col82d;
+		text-align: $center;
+	}
+	ul{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		width: $width350;
+		flex-wrap:-webkit-wrap;
+		flex-wrap:-ms-wrap;
+		flex-wrap:wrap;
+		text-align: $center;
+		li{
+			width: $width50;
+			height: $height50;
+			line-height: $lineHeight50;
+			border-bottom: 1px solid $cole9e;
+			border-left: 1px solid $cole9e;
+			box-sizing: $borderBox;
+			cursor: $pointer;
+			&.calendar_week{
+				height: $height50;
+				line-height: $lineHeight50;
+				cursor: default;
+			}
+			&.calendar_block{
+				cursor: default;
+			}
+			&.current_day{
+				color: $colWhite;
+				background-color: $col82d;
+			}
+			&.mouse_on{
+				background-color: $cole9e;
+			}
+		}
+	}
+}
+
+// calDetail start
+.calDetail{
+	position: $posRel;
+	top: -300px;
+	left: 350px;
+	margin-left: 50px;
+	padding: 0 10px;
+	width: $width350 - 50;
+	border-left: 1px solid $cole9e;
+	border-right: 1px solid $cole9e;
+	.default{
+		color: $cole9e;
+	}
+	.date span{
+		float: right;
+		color: $colWhite;
+		padding: $padd05;
+		border-radius: 2px;
+		cursor: $pointer;
+	}
+	.detItem{
+		margin-bottom: 30px; 
+		border-bottom: 1px dashed $cole9e;
+		.default{
+			color: $cole9e;
+		}
+		span.add_off{
+			background-color: $cole9e;
+		}
+		span.add_on{
+			background-color: $col82d;
+		}
+
+		span.itemTitle{
+			display: $disBlock;
+		}
+		span.itemTime{
+			display: $disInlBlock;
+			margin-top: 10px;
+			padding: $padd05;
+			background-color: $col82d;
+			color: $colWhite;
+		}
+		span.icon_off{
+			display: $disInlBlock;
+			width: $width50 / 5;
+			height: $height50 / 5;
+			background-color: $cole9e;
+		}
+		span.icon_on{
+			display: $disInlBlock;
+			width: $width50 / 5;
+			height: $height50 / 5;
+			background-color: $colGreen;
+		}
+		span.state_off{
+			display: $disInlBlock;
+			margin: 10px 0 0 5px;
+			color: $cole9e;
+		}
+		span.state_on{
+			display: $disInlBlock;
+			margin: 10px 0 0 5px;
+			color: $colGreen;
+		}
+	}
+}
+
+.addBar{
+	position: absolute;
+	left: 730px;
+	top: 100px;
+	width: 256px;
+	height: $height50 * 4;
+	box-sizing: $borderBox;
+	ul{
+		margin-bottom: 30px;
+		border-bottom: 1px solid $cole9e;
+		li{
+			float: left;
+			padding: 0 5px;
+			color: #999999;
+			border-radius: 2px;
+			cursor: $pointer;
+			&.selected{
+				color: $colWhite;
+				background-color: $col82d;
+			}
+		}
+	}
+	.itemGroup{
+		margin-bottom: 5px;
+		span{
+			padding: 0 2px;
+			color: white;
+			background-color: $cole9e;
+			text-align: $center;
+		}
+		select{
+			border: $none;
+			font-size: 16px;
+			outline: $none;
+		}
+	}
+	
+	textarea{
+		display: $disBlock;
+		margin:5px 0;
+		padding: 5px;
+		border: 1px dashed $cole9e;
+		outline: $none;
+		resize: $none;
+	}
+	.hide{
+		display: $none;
+	}
+	.doit{
+		display: block;
+		text-align: $center;
+		cursor: $pointer;
+	}
+	
+	.count{
+		position: $posRel;
+		top: -55px;
+		left: 190px;
+		font-size: 14px;
+		border: $none;
+		color: #999999;
+	}
+}
+
+.show{
+	display: $disBlock;
+}
+.hide{
+	display: $none;
+}
+.off{
+	background-color: $cole9e;
+}
+.on{
+	color: $colWhite;
+	background-color: $col82d;
+}
+.complete{
+	text-decoration: line-through;
+}
+
